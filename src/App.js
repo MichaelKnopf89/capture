@@ -1,11 +1,12 @@
 import AboutUs from "./pages/AboutUs";
 import GlobalStyle from "./components/GlobalStyle";
+import Nav from "./components/Nav";
 
 function App() {
   return (
     <div className="App">
-      <h1>film.</h1>
       <GlobalStyle />
+      <Nav />
       <AboutUs />
     </div>
   );
