@@ -3,7 +3,8 @@ import GlobalStyle from "./components/GlobalStyle";
 import ContactUs from "./pages/ContactUs";
 import OurWork from "./pages/OurWork";
 import Nav from "./components/Nav";
-import {Route, Routes} from 'react-router-dom'
+import {Outlet, Route, Routes} from 'react-router-dom';
+import MovieDetail from "./pages/MovieDetail";
 
 function App() {
   return (
@@ -13,9 +14,11 @@ function App() {
       <Routes>
         <Route path="/" exact element={<AboutUs/>}/>
         <Route path="/aboutus" exact element={<AboutUs/>}/>
-        <Route path="/ourwork" exact element={<OurWork/>}/>
+        <Route path="/work" exact element={<OurWork/>}/>
+        <Route path="/work/:id" element={<MovieDetail/>}/>
         <Route path="/contactus" exact element={<ContactUs/>}/>
       </Routes>
+      <Outlet />
     </div>
   );
 }
